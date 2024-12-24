@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 public/
+=======
+/public/
+/resources/
+.hugo_build.lock
+>>>>>>> refs/heads/main
