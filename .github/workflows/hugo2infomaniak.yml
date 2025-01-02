@@ -3,7 +3,7 @@ ame: hugo2infomaniak
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
