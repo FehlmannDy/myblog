@@ -28,6 +28,6 @@ jobs:
 
       - name: Deploy with git-ftp
         run: |
-          git ftp init --user "${{ secrets.SFTP_USER }}" \
+          git ftp push --user "${{ secrets.SFTP_USER }}" \
                        --passwd "${{ secrets.SFTP_PASSWORD }}" \
                        ftp://${{ secrets.SFTP_SERVER }}
