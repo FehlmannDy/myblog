@@ -9,7 +9,7 @@ theme: 'light'
 
 Je m'appelle Dylan Fehlmann, étudiant à la HEIG-VD en spécialisation cyber-sécurité. En parallèle, je travaille à hauteur de 50% pour développer mes compétences professionnelles.
 
-Depuis quelques temps, je me passionne depuis quelque temps pour la calisthénie et le trail, une pour l'esthetique de l'utilisation de la force physque et l'autre pour repousser mes limites mentales et physiques. Avant cela, j’ai consacré une dizaine d’années au scoutisme, cette expériance a profondément marqué ma vision de la nature et de la survie au sens large. Elle a nourri mon goût pour les randonnées et les bivouacs.
+Depuis quelques temps, je me passionne pour la calisthénie et le trail, une pour l'esthetique de l'utilisation de la force physque et l'autre pour repousser mes limites mentales et physiques. Avant cela, j’ai consacré une dizaine d’années au scoutisme, cette expériance a profondément marqué ma vision de la nature et de la survie au sens large. Elle a nourri mon goût pour les randonnées et les bivouacs.
 
 Quand l’hiver approche, je me tourne vers les montagnes pour skier et profiter des belles journées ensoleillées en altitude sur les plus beaux massifs que la Suisse.
 
