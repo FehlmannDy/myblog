@@ -20,14 +20,15 @@ jobs:
           hugo-version: 'latest'
           extended: true 
 
-      - name: Build
-        run: hugo --minify
+      - name: Build Hugo site
+        run: hugo --minify  # Assure-toi que le site est généré dans le dossier public/
 
-      - name: Install git-ftp
-        run: sudo apt-get install git-ftp
+      - name: List files in public directory  # Vérification des fichiers générés
+        run: ls -la public/
 
-      - name: Deploy with git-ftp
+      - name: Install lftp
+        run: sudo apt-get install lftp
+
+      - name: Deploy with lftp
         run: |
-          git ftp init --user "${{ secrets.SFTP_USER }}" \
-                       --passwd "${{ secrets.SFTP_PASSWORD }}" \
-                       ftp://${{ secrets.SFTP_SERVER }}
+          lftp -e "mirror -R public/ / --ignore-time --parallel=2; quit" -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }} ${{ secrets.SFTP_SERVER }}
