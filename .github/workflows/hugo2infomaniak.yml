@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy with lftp
         run: |
-          lftp -e "mirror -R public/ /path/on/server --ignore-time --parallel=2; quit" -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }} ${{ secrets.SFTP_SERVER }}
+          lftp -e "mirror -R public/ / --ignore-time --parallel=2; quit" -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }} ${{ secrets.SFTP_SERVER }}
