@@ -30,4 +30,4 @@ jobs:
         run: |
           git ftp init --user "${{ secrets.SFTP_USER }}" \
                        --passwd "${{ secrets.SFTP_PASSWORD }}" \
-                       sftp://${{ secrets.SFTP_SERVER }}
+                       ftp://${{ secrets.SFTP_SERVER }}
