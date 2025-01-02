@@ -1,4 +1,4 @@
-ame: hugo2infomaniak
+name: hugo2infomaniak
 
 on:
   push:
