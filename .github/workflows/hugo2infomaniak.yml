@@ -22,12 +22,11 @@ jobs:
 
       - name: Build
         run: hugo --minify
-
-      - name: Install git-ftp
-        run: sudo apt-get install git-ftp
-
-      - name: Deploy with git-ftp
-        run: |
-          git ftp init --user "${{ secrets.SFTP_USER }}" \
-                       --passwd "${{ secrets.SFTP_PASSWORD }}" \
-                       ftp://${{ secrets.SFTP_SERVER }}
+      
+      - name: SFTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        with:
+          ftp-server: ${{ secrets.SFTP_SERVER }}
+          ftp-username: ${{ secrets.SFTP_USER }}
+          ftp-password: ${{ secrets.SFTP_PASSWORD }}
+          local-dir: public/
