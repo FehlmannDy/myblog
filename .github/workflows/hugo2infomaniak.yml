@@ -20,16 +20,15 @@ jobs:
           hugo-version: 'latest'
           extended: true 
 
-      - name: Build
+      - name: Build Hugo site
         run: hugo --minify  # Assure-toi que le site est généré dans le dossier public/
 
-      - name: List files in public directory  # Ajout d'une étape de vérification
+      - name: List files in public directory  # Vérification des fichiers générés
         run: ls -la public/
 
-      - name: SFTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
-        with:
-          ftp-server: ${{ secrets.SFTP_SERVER }}
-          ftp-username: ${{ secrets.SFTP_USER }}
-          ftp-password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: public/  # Cette ligne spécifie que seul le contenu du dossier public/ doit être envoyé
+      - name: Install lftp
+        run: sudo apt-get install lftp
+
+      - name: Deploy with lftp
+        run: |
+          lftp -e "mirror -R public/ /path/on/server --ignore-time --parallel=2; quit" -u ${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }} ${{ secrets.SFTP_SERVER }}
