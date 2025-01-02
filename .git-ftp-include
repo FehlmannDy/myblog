@@ -1,0 +1,18 @@
+# Inclure des fichiers spécifiques
+config.toml
+
+# Inclure les workflows GitHub
+.github/workflows/hugo2sftp.yml
+
+# Inclure les contenus et les articles
+content/
+content/posts/my-first-post.md
+
+# Inclure les layouts, les données et les fichiers statiques
+layouts/
+data/
+static/
+
+themes/
+
+# Facultatif : ajouter d'autres chemins ou fichiers spécifiques si nécessaire
