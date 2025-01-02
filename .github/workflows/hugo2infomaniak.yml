@@ -21,12 +21,15 @@ jobs:
           extended: true 
 
       - name: Build
-        run: hugo --minify
-      
+        run: hugo --minify  # Assure-toi que le site est généré dans le dossier public/
+
+      - name: List files in public directory  # Ajout d'une étape de vérification
+        run: ls -la public/
+
       - name: SFTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@latest
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
           ftp-server: ${{ secrets.SFTP_SERVER }}
           ftp-username: ${{ secrets.SFTP_USER }}
           ftp-password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: public/
+          local-dir: public/  # Cette ligne spécifie que seul le contenu du dossier public/ doit être envoyé
