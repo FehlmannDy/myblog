@@ -13,5 +13,7 @@ paginate = 5
   [[params.socialMedia]]
     name = 'Github'
     url = 'https://github.com/fehlmanndy'
-    
-  
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
