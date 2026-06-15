@@ -5,7 +5,7 @@ hasCJKLanguage = true
 enableEmoji = true
 title = 'Fehlmann.dev'
 copyright = 'Fehlmann Dylan'
-theme = 'hugo-theme-itheme'
+theme = 'bifr0st'
 paginate = 5
 [params]
   defaultCover = 'https://www.apple.com.cn/newsroom/images/apple-logo_black.jpg.landing-regular_2x.jpg'

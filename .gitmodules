@@ -1,0 +1,3 @@
+[submodule "themes/bifr0st"]
+	path = themes/bifr0st
+	url = https://github.com/FehlmannDy/hugo-theme-bifr0st.git
