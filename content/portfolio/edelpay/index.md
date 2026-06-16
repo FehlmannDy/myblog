@@ -20,7 +20,7 @@ Après cet échauffement intense, nous avons décidé de prendre une nuit de rep
 
 Voici la track de Flare et le [lien](https://flare-network.notion.site/Flare-Hackathon-Guide-ETH-Oxford-2026-2e6d502e6fa680598c39c7103e3c4763)
 
-![Flare track](./flare_track.png)
+![Flare track](flare_track.png)
 
 ## Les dernières 48 heures
 
