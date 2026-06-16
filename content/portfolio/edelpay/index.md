@@ -46,7 +46,7 @@ Pour donner vie à EdelPay en un week-end, nous avons déployé une architecture
 
 ## Parcours utilisateur
 
-{{</* mermaid */>}}
+{{< mermaid >}}
 flowchart TD
     Start([Accueil : localhost:3000]) --> Connect{Connexion Wallet\nHeader}
     Connect -->|XUMM, GEM ou Crossmark| Middleware{Middleware\nVérification statut KYC}
@@ -64,11 +64,11 @@ flowchart TD
     BuyerDash --> B_Action(Parcourir les annonces\net acheter)
     SellerDash --> S_Action1(Gérer les annonces)
     SellerDash --> S_Action2(Enregistrer les mappings\nVendeur-Payeur)
-{{</* /mermaid */>}}
+{{< /mermaid >}}
 
 ## Flux de transaction
 
-{{</* mermaid */>}}
+{{< mermaid >}}
 sequenceDiagram
     autonumber
     actor Vendeur
@@ -98,7 +98,7 @@ sequenceDiagram
     EdelPay->>EdelPay: Détecte le paiement final complété
     Acheteur->>EdelPay: Réclame la récupération du collatéral/bien
     EdelPay->>Acheteur: Transfère la garantie à l'acheteur
-{{</* /mermaid */>}}
+{{</ /mermaid />}}
 
 # Ce que j'ai appris
 
