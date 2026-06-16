@@ -48,22 +48,18 @@ Pour donner vie à EdelPay en un week-end, nous avons déployé une architecture
 
 {{< mermaid >}}
 flowchart TD
-    Start([Accueil : localhost:3000]) --> Connect{Connexion Wallet\nHeader}
-    Connect -->|XUMM, GEM ou Crossmark| Middleware{Middleware\nVérification statut KYC}
-    
-    Middleware -->|Non enregistré| KYC_Page[/Redirection vers /kyc/]
+    Start([Accueil : localhost:3000]) --> Connect{Connexion Wallet<br/>Header}
+    Connect -->|XUMM, GEM ou Crossmark| Middleware{Middleware<br/>Vérification statut KYC}
+    Middleware -->|Non enregistré| KYC_Page[/"Redirection vers /kyc/"/]
     KYC_Page --> EdelID[Vérification d'identité via Edel-ID]
     EdelID --> Success([Succès KYC])
-    
     Middleware -->|Déjà enregistré| RoleCheck{Sélection du Rôle}
     Success --> RoleCheck
-    
-    RoleCheck -->|Acheteur| BuyerDash[/Redirection vers /buyer-dashboard/]
-    RoleCheck -->|Vendeur| SellerDash[/Accès à /seller-dashboard/]
-    
-    BuyerDash --> B_Action(Parcourir les annonces\net acheter)
+    RoleCheck -->|Acheteur| BuyerDash[/"Redirection vers /buyer-dashboard/"/]
+    RoleCheck -->|Vendeur| SellerDash[/"Accès à /seller-dashboard/"/]
+    BuyerDash --> B_Action(Parcourir les annonces<br/>et acheter)
     SellerDash --> S_Action1(Gérer les annonces)
-    SellerDash --> S_Action2(Enregistrer les mappings\nVendeur-Payeur)
+    SellerDash --> S_Action2(Enregistrer les mappings<br/>Vendeur-Payeur)
 {{< /mermaid >}}
 
 ## Flux de transaction
